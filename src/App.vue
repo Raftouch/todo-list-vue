@@ -48,10 +48,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="flex flex-col gap-5 items-center pt-10 bg-pink-100 w-full min-h-screen">
+  <main class="flex flex-col gap-5 items-center pt-10 bg-pink-100 min-h-screen">
     <section>
-      <h2>
-        What's up, <input class="bg-pink-100" type="text" placeholder="name here" v-model="name" />
+      <h2 class="ml-24 font-bold text-xl">
+        Hello <input class="bg-pink-100" type="text" placeholder="name here" v-model="name" />
       </h2>
     </section>
 
@@ -90,7 +90,7 @@ onMounted(() => {
           </label>
           <!-- {{ inputCategory }} -->
         </div>
-        <input class="bg-pink-500 p-2 rounded" type="submit" value="Add todo">
+        <input class="bg-blue-500 p-2 rounded text-white" type="submit" value="Add todo">
       </form>
     </section>
     <!-- {{ todosAscending }} -->
@@ -98,7 +98,7 @@ onMounted(() => {
     <section>
       <h3 class="uppercase">Todo list</h3>
       <div>
-        <div v-for="todo in todosAscending" :class="`todo-item ${todo.done && 'done'}`">
+        <div class="flex items-center gap-5 mt-5 bg-white p-2 rounded" v-for="todo in todosAscending" :class="`todo-item ${todo.done && 'done'}`">
           <label>
             <input type="checkbox" v-model="todo.done">
             <span :class="`bubble ${todo.category}`"></span>
@@ -109,7 +109,7 @@ onMounted(() => {
           </div>
 
           <div class="actions">
-            <button class="delete" @click="removeTodo(todo)">Delete</button>
+            <button class="bg-red-500 rounded p-2 text-white" @click="removeTodo(todo)">Delete</button>
           </div>
 
         </div>
