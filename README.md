@@ -2,4 +2,4 @@
 - [x] i tailwind
 - [x] create categories
 - [x] add functionalities (addTodo, removeTodo, todo done)
-- [ ] add styles
+- [x] add styles
